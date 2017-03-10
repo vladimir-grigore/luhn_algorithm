@@ -1,5 +1,5 @@
 var assert = require('chai').assert;
-var check = require('../check.js');
+var check = require("../check");
 
 describe("Check", function(){
   it('should return true if a number passes Luhn algorithm', function(){

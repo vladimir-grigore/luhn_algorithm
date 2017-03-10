@@ -3,6 +3,10 @@ function check(number) {
   var num = ("" + number).split('');
   var computedArray = computeCheckDigits(num);
   var checkSum = sumCheckDigits(computedArray)
+  var checkDigit = (checkSum * 9) % 10;
+
+  //return true if the last digit matched the calculated check digit
+  return (checkDigit === Number(num[num.length-1]));
 }
 
 function computeCheckDigits(array) {
@@ -42,4 +46,4 @@ function sumCheckDigits(array) {
   return checkSum;
 }
 
-check(79927398713)
+module.exports = check;
